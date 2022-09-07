@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #696969;
+    background-color: #f3f3f3;
 }
 
 h1, h2, h3, h4, h5, h6, span {
@@ -137,13 +137,15 @@ nav {
     font-size: 20px;
     color: black;
     text-decoration: none;
-    padding: 0 16px;
+    padding: 16px;
 }
 
 .about-me__image--container {
     flex: 1;
     display: flex;
     align-items: center;
+    width: 720px;
+    margin: 20px 0;
 }
 
 .about-me__image {

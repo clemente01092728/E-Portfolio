@@ -27,6 +27,7 @@ p {
 
 a {
     text-decoration: none;
+    position: relative;
 }
 
 li {
@@ -62,6 +63,26 @@ section:nth-child(even) {
 .section__title {
     margin-bottom: 20px;
 }
+
+.link__hover-effect:after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color: black;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect--white:after {
+    background-color: #fff;
+}
+
+.link__hover-effect:hover:after {
+    width: 100%;
+    left: 0;
+} 
 
 /* NAVIGATION BAR */
 
@@ -268,7 +289,7 @@ nav {
 }
 
 .project__list {
-    padding: 40px:
+    padding: 40px;
 }
 
 .project__description {

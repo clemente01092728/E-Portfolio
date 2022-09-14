@@ -50,6 +50,7 @@ li {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 12px;
 }
 
 .text--red {
@@ -94,6 +95,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 12px;
 }
 
 .nav__link--list {
@@ -127,7 +129,7 @@ nav {
 
 /* ABOUT ME*/
 
-#about-me {
+.about-me {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -143,8 +145,6 @@ nav {
     flex-direction: column;
     align-items: center;
     max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
 }
 
 .about-me__picture--mask {
@@ -182,7 +182,6 @@ nav {
     flex: 1;
     display: flex;
     align-items: center;
-    width: 720px;
 }
 
 .about-me__image {
@@ -222,6 +221,7 @@ nav {
     display: flex;
     width: 100;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .language__name {
@@ -374,4 +374,94 @@ footer {
 .footer__anchor:hover .footer__logo--popper{
     transform: translateX(60px);
     opacity: 1;
+}
+
+/* Small phones, tablets, large smartphones */
+@media (max-width: 768px) {
+    nav {
+        height: 68px; 
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .about-me__info--para {
+        font-size: 18px;
+    }
+
+    .about-me__image--container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .about-me__image {
+        width: 100%;
+    }
+
+    .language {
+        width: calc(100%/3);
+    }
+
+    .project__description--para {
+        font-size: 14px;
+    }
+
+    .project__description {
+        left: 30px;
+        padding-right: 30px; 
+    }
+}
+
+/* small Phones */ 
+@media (max-width: 480px) {
+    nav {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .nav__link:not(:last-child) {
+        display: none;
+    }
+
+    .about-me__image--container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .about-me__image {
+        width: 100%;
+    }
+
+    .project__description {
+        padding: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .project__description--para {
+        display: none;
+    }
+
+    .project__description--links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .project__description--title {
+        font-size: 32px;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .project__description--sub-title {
+        text-align: center;
+        margin: 12px 0;
+    }
 }
